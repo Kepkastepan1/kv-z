@@ -1,13 +1,98 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="projekt.js"defer></script> 
-    </head>
+<head>
+<title>kvíz</title>
+
+<script src="kvíz_projekt.js"defer></script>
+
+<style>
+
+.skr{
+display: none !important;
+}
+#skore_uk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    margin: 0 auto 30px auto;
+} 
+#hrac_sk1 {
+    background-color: orange; 
+    border: 2px solid black; 
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+#hrac_sk2{
+background-color: lime; 
+    border: 2px solid black; 
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+#plocha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+.tlacitko {
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+#odpoved_ok {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#obsah {
+    background-color: white;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+</style>
+</head>
 <body>
-<h1>JavaScript if</h1>
+<div id="skore_uk">
 
-<p>Display "Good day!" if the hour is less than 18:00:</p>
+<div id="hrac_sk1">hrac 1:<span id="skore_1">0</span>bodů</div>
+<div id="hrac_sk2">hrac 2:<span id="skore_2">0</span>bodů</div>
 
-<p id="demo">Good Evening!</p>
+</div>
+
+ <div id="plocha">
+<button class="tlacitko" data-hodnota="100">otázka za 100 bodů </button>
+
+
+ </div>
+
+ <div id="odpoved_ok" class="skr">
+    <div id="obsah">
+        <h3 id="otazka">zkouška</h3>
+            <div id="vyber_od">
+                 <button class="odpoved_na_ok" data-prvni="1"> odpoved</button>
+                <button class="odpoved_na_ok" data-prvni="2"> odpoved</button>
+                 <button class="odpoved_na_ok" data-prvni="3"> odpoved</button>
+             </div>
+    </div>
+ </div>
+
 </body>
 </html>
