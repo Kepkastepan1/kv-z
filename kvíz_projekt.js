@@ -102,6 +102,10 @@ tlacitko.forEach(function(tlacitko) {
             otazkaText.textContent = aktualniOtazka.text;
         }
 
+      /**
+ * AI Generated
+ * Model Gemini 3
+ */
         odpoved_na_ok.forEach(function(tlacitko_M, i) {
             tlacitko_M.textContent = aktualniOtazka.pocet[i];
         });
